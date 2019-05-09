@@ -20,14 +20,6 @@ public class DubaiPoliceWebServices {
 	public String getFines(@PathParam("license-no") String license_no) {
 		return database.getFines(license_no).toString();
 	}
-
-//	@POST
-//	@Path("get-fines-d")
-//	@Consumes(MediaType.APPLICATION_JSON)
-//	@Produces(MediaType.TEXT_PLAIN)
-//	public String getFiness(JSONObject message) {
-//		return database.getFiness(message).toString();
-//	}
 	
 	@GET
 	@Path("payment/{fine-no}/{license-no}/{credit-card}/{amount}")
